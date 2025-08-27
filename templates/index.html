@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Candy Match-3</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>Candy Match-3</h1>
+        <div class="stats">
+          <div>Score: <span id="score">0</span></div>
+          <div>Moves: <span id="moves">0</span></div>
+        </div>
+      </header>
+
+      <section class="controls">
+        <form id="new-game-form">
+          <label>Rows <input type="number" id="rows" min="3" max="12" value="8" /></label>
+          <label>Cols <input type="number" id="cols" min="3" max="12" value="8" /></label>
+          <label>Types <input type="number" id="types" min="3" max="7" value="6" /></label>
+          <label>Moves <input type="number" id="moves-input" min="5" max="200" value="25" /></label>
+          <label><input type="checkbox" id="emoji" checked /> Emoji</label>
+          <button type="submit">New Game</button>
+        </form>
+        <div class="buttons">
+          <button id="hint-btn">Hint</button>
+          <button id="shuffle-btn">Shuffle (-1 move)</button>
+        </div>
+        <div id="message" class="message"></div>
+      </section>
+
+      <section class="board-wrap">
+        <div id="board" class="board" role="grid" aria-label="Candy board"></div>
+      </section>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+  </html>
+
